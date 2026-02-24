@@ -463,16 +463,16 @@ Work through these phases in order. Each one builds on the last and is independe
 
 ### Phase 1 — Project Setup (Day 1)
 
-- [ ] Create GitHub repo called `trivia-game`
-- [ ] Set up `/client` with Vite + React: `npm create vite@latest client -- --template react`
-- [ ] Set up `/server` with Express: `npm init -y` then install dependencies:
+- [X] Create GitHub repo called `trivia-game`
+- [X] Set up `/client` with Vite + React: `npm create vite@latest client -- --template react`
+- [X] Set up `/server` with Express: `npm init -y` then install dependencies:
   ```bash
   npm install express socket.io cors dotenv pg bcrypt jsonwebtoken @anthropic-ai/sdk
   ```
 - [ ] Install Tailwind in client: follow [tailwindcss.com/docs/guides/vite](https://tailwindcss.com/docs/guides/vite)
-- [ ] Verify Express runs on port 4000 and React dev server starts
-- [ ] Set up `.env` files for both client and server
-- [ ] Add `.env` to `.gitignore`
+- [X] Verify Express runs on port 4000 and React dev server starts
+- [X] Set up `.env` files for both client and server
+- [X] Add `.env` to `.gitignore`
 
 ### Phase 2 — Database & Auth (Days 2–3)
 
