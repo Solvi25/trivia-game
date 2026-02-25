@@ -476,14 +476,14 @@ Work through these phases in order. Each one builds on the last and is independe
 
 ### Phase 2 — Database & Auth (Days 2–3)
 
-- [ ] Create Supabase project and run the schema SQL
-- [ ] Build `db.js` — PostgreSQL connection pool using `DATABASE_URL`
-- [ ] Build `POST /auth/register` — hash password with bcrypt, insert user, return JWT
-- [ ] Build `POST /auth/login` — verify password, return JWT
-- [ ] Build `Login.jsx` — simple form with username/password, toggle between login/register
-- [ ] Store JWT in localStorage on successful login
+- [X] Create Supabase project and run the schema SQL
+- [X] Build `db.js` — PostgreSQL connection pool using `DATABASE_URL`
+- [X] Build `POST /auth/register` — hash password with bcrypt, insert user, return JWT
+- [X] Build `POST /auth/login` — verify password, return JWT
+- [X] Build `Login.jsx` — simple form with username/password, toggle between login/register
+- [X] Store JWT in localStorage on successful login
 - [ ] Build auth middleware that verifies JWT on protected routes
-- [ ] **Test:** register a user, log in, get a token, refresh the page and stay "logged in"
+- [X] **Test:** register a user, log in, get a token, refresh the page and stay "logged in"
 
 ### Phase 3 — Question Generation (Day 3)
 
