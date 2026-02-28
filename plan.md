@@ -491,8 +491,8 @@ Work through these phases in order. Each one builds on the last and is independe
 - [X] Build `scripts/generate-questions.js` using the Claude API (see script above)
 - [X] Run it: `node scripts/generate-questions.js`
 - [X] Verify questions are in your Supabase database (check the table in the Supabase dashboard)
-- [ ] Build `GET /questions/random?count=15` route — returns N random questions from DB
-- [ ] **Important:** This route should shuffle the 4 answer options per question before sending to the client (so the correct answer isn't always in the same position)
+- [X] Build `GET /questions/random?count=15` route — returns N random questions from DB
+- [X] **Important:** This route should shuffle the 4 answer options per question before sending to the client (so the correct answer isn't always in the same position)
 
 ### Phase 4 — Home Screen & Navigation (Day 4)
 

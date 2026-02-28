@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Login from './components/Login';
+import Home from './components/Home';
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('token'));
@@ -29,16 +30,7 @@ function App() {
         />
         <Route
           path="/"
-          element={
-            token ? (
-              <div>
-                <h1>Welcome, {user?.username}!</h1>
-                <button onClick={handleLogout}>Logout</button>
-              </div>
-            ) : (
-              <Navigate to="/login" />
-            )
-          }
+          element={token ? <Home user={user} onLogout={handleLogout} /> : <Navigate to="/login" />}
         />
       </Routes>
     </BrowserRouter>

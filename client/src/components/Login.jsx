@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Login.css';
 
 const API_URL = import.meta.env.VITE_SERVER_URL;
 
@@ -35,34 +36,32 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div style={{ maxWidth: '400px', margin: '100px auto', textAlign: 'center' }}>
+    <div className="login-container">
       <h1>{isRegister ? 'Register' : 'Login'}</h1>
 
-      <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: '10px' }}>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <div>
           <input
             type="text"
             placeholder="Username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
-            style={{ padding: '8px', width: '100%' }}
           />
         </div>
-        <div style={{ marginBottom: '10px' }}>
+        <div>
           <input
             type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            style={{ padding: '8px', width: '100%' }}
           />
         </div>
 
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+        {error && <p className="login-error">{error}</p>}
 
-        <button type="submit" style={{ padding: '10px 20px', marginBottom: '10px' }}>
+        <button type="submit">
           {isRegister ? 'Register' : 'Login'}
         </button>
       </form>
@@ -70,8 +69,8 @@ function Login({ onLogin }) {
       <p>
         {isRegister ? 'Already have an account?' : "Don't have an account?"}{' '}
         <button
+          className="login-toggle"
           onClick={() => { setIsRegister(!isRegister); setError(''); }}
-          style={{ background: 'none', border: 'none', color: 'blue', cursor: 'pointer' }}
         >
           {isRegister ? 'Login' : 'Register'}
         </button>
